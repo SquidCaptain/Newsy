@@ -1,4 +1,6 @@
 server/test.py
+server/model.keras
+server/venv/*
 frontend/*
 server/Dataset/*
 package-lock.json
