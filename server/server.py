@@ -249,4 +249,4 @@ def comment(current_user):
 
 # main
 if __name__=="__main__":
-    get_news()
+    app.run(debug=True)
