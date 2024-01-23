@@ -213,10 +213,12 @@ def news(current_user):
     data = request.get_json()
     reply = "this is a temp reply"
     reply = get_news()
-    return jsonify({
-        "result": "Success",
-        "reply": reply
-    })
+    if reply:
+        return jsonify({
+            "result": "Success",
+            "reply": reply
+        })
+    return make_response("Something went wrong!", 501)
 
 # Logs API Route
 # Endpoint to get comments for logged in user
