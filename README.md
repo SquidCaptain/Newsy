@@ -5,13 +5,14 @@ A RESTful API that shows top news stories to members
 - Python
 - Flask
   - Flask-SQLAlchemy
-  - Flaks-Cors
-  - Flask-Bcrypt
 - AI
   - Google colab
   - Tensorflow Keras
   - BERT model
   - Kaggle's BBC News Classification Dataset
+
+## External Dependencies
+- newspaper3k
  
 
 
@@ -20,7 +21,7 @@ A RESTful API that shows top news stories to members
 ### Checklist (initial functionality)
 - [x] Model compiled and trained
 - [x] Model implemented into API
-- [x] API routes finished (initial functionality)
+- [x] API routes finished
   - [x] Home
     - [x] Guide on API
   - [x] Login
@@ -29,13 +30,13 @@ A RESTful API that shows top news stories to members
   - [x] Register
   - [x] News
     - [x] Request to NewsAPI implemented
-    - [x] Parse article -newspaper3k
+    - [x] Parse article 
     - [x] Catagorize article
   - [x] Comment
     - [x] Create comments
     - [x] See self comment history
 
 ### Checklist (more) 
-- [ ] See other people's comments on an article
+- [ ] See other people's comments on a specified article
+- [ ] React frontend as an example frontend that uses the API
 - [ ] Host API on a server or some platform (ex. AWS)
-- [ ] Optional frontend
