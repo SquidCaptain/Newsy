@@ -14,11 +14,13 @@ A RESTful API that shows top news stories to members
   - Kaggle's BBC News Classification Dataset
  
 
-### Checklist
 
+## Checklist
+
+### Checklist (initial functionality)
 - [x] Model compiled and trained
 - [x] Model implemented into API
-- [ ] API routes finished
+- [x] API routes finished (initial functionality)
   - [x] Home
     - [x] Guide on API
   - [x] Login
@@ -29,9 +31,11 @@ A RESTful API that shows top news stories to members
     - [x] Request to NewsAPI implemented
     - [x] Parse article -newspaper3k
     - [x] Catagorize article
-  - [ ] Comment
+  - [x] Comment
     - [x] Create comments
     - [x] See self comment history
-    - [ ] See other people's comments on an article
+
+### Checklist (more) 
+- [ ] See other people's comments on an article
 - [ ] Host API on a server or some platform (ex. AWS)
 - [ ] Optional frontend
