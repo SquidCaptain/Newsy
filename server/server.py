@@ -51,7 +51,11 @@ class Comments(db.Model):
 
 # Functions ----------------------------------------
 
-# token_requrired(f) a decorator for routes that need login
+# create_db() creates the database, called from command line
+def create_db():
+    db.create_all()
+
+# token_requrired(f) a decorator for routes that need login token
 def token_required(f):
     @wraps(f)
     def decorated(*args, **kwargs):
@@ -68,11 +72,8 @@ def token_required(f):
         return f(current_user, *args, **kwargs)
     return decorated
 
-# create_db() creates the database
-def create_db(self):
-    db.create_all()
-
-# decode_prob()
+# decode_prob() decodes the probabilites returned by the model
+# Listof(Listof(int)) -> str
 def decode_prob(prob):
     best_index = 0
     best_prob = 0
@@ -92,6 +93,8 @@ def decode_prob(prob):
         return "business"
 
 # get_news() get news from the Newsapi API and return the response as a JSON object
+# Void -> JSON
+# Side Effects: changes last_news_result and last_news_query_time
 def get_news(self):
     url = (
         'https://newsapi.org/v2/top-headlines?'
@@ -116,6 +119,7 @@ def get_news(self):
     return last_news_result
 
 # validate_password(password) returns true if password is in a valid format
+# str -> bool
 def validate_password(self, password):
     if password is not str or len(password) != 64:
         return False
@@ -123,7 +127,7 @@ def validate_password(self, password):
  
 
 # validate_username(username) returns true if username is not already in database
-# Behaviour: String -> Bool
+# str-> bool
 def validate_username(self, username):
     if username is not str or len(username) > 20:
         return False
