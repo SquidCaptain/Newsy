@@ -1,6 +1,10 @@
 # Newsy
 A RESTful API that shows top news stories to members
 
+## Motivation
+The motivation for this project came from needing a quick source of conversational topics that is relevant and engaging.
+The AI classification implementation allows for a filter to be put up for topics users are intrested in.
+
 ## Technologies used
 - Python
 - Flask
